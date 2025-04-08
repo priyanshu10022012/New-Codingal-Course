@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Styling Examples</title>
+        <style> 
+
+        
+            h2{ color:red;
+            }
+            link rel:stylesheet href style.css
+        </style>
+        </head>
+        <body>
+        <h1 style="color: red;">inline css example</h1>
+        <h2>internal css example</h2>
+        <h3>external css example</h3>
+        <h4>element selector</h4>
+
+        {
+            font size:30px;
+            font-width;100;
+        }
+     h3
+        {color:blue;"
+
+        }
+        h4
+        {color:darkorange:"
+
+        }
+        .myclass{oon;
+    }
+#myid
+{color:mediumpurple
+}
+<h5,
+p{color:maroon
+}
+
+    </body>
+</html>
