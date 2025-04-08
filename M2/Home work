@@ -5,7 +5,7 @@
     html{
         font-size:30px;
         background-color:yellow;
-        color:white;
+        color:black;
         font-family:arial;}
     #test{
         font-size: 35px
