@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        html {
+            font-size: 20px;
+            background-color: antiquewhite;
+            color:black;
+            font-family: arial;
+            }
+            #test {
+                font-size: 25px;
+            background-color: aquamarine;
+            color:black;
+            text-align: justify;
+            }
+            
+        </style>
+        </head>
+        <body>
+            <p>Shri Dhanushram kushwah S% Chaturprashad kushwah (PM ,B, LHU) has been trained, examined and
+            found fit for his knowledge of rules and special Instructions applicable to the equipment provided at the
+            station as laid down in the Station Working Rules to enable him to operate isolator switches under
+            instructions from TPC in</p>
+        </body>
+</html>
