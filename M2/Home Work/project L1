@@ -3,12 +3,11 @@
     <head>
         <title>replit</title>
         <style>
-            body { background-color: aqua;
+            body { 
+                background-color: #cccccc;
                 background-image:url(Images/waterfall.jpg);
-                background-size: 250px 250px;
-                background-repeat: no-repeat;
-                background-position-x: top right;
-                background-attachment: scroll;
+                background-position:relative;
+                background-attachment:fixed;
 
             }
             
