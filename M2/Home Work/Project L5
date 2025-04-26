@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+    </style>
+</head>
+
+<body>
+    
+    <h2 style="color:aquamarine">Flower garden</h2>
+    <p style="color:rgb(225, 0, 255)">
+        In a flower garden, we can see different varieties of flowers, which include roses, sunflowers, chrysanthemums, lilies,jasmine, carnations, daffodils, peonies etc.
+    </p>
+
+        <img src="Images/garden.jpg"
+        alt="garden"
+        style="width: 10opx;">
+
+        <img src="Images/waterfall.jpg"
+        alt="garden"
+        style="width: 100px;">
+        <p style="color:rgb(176, 255, 127)">A waterfall is a river or other body of water's steep fall over a rocky ledge into a plunge pool below. Waterfalls are
+        also called cascades. The process of erosion, the wearing away of earth, plays an important part in the formation of
+        waterfalls. Waterfalls themselves also contribute to erosion.</p>
+</body>
+
+</html>
