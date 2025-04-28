@@ -24,7 +24,7 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></scri
         background-color: violet;
         font-size: 20px;  
     }
-    #a3, a6 {
+    #a3, #a6 {
         color: aliceblue;
         background-color: orange;
         font-size: 20px;  
