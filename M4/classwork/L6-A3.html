@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="un">
+    <head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login Form</title>
+    
+    <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <h2>Real time validation utilied Js</h2>
+        <form id="loginform" onsubmit="validate(event)"
+        <fieldset>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+               <label for="password">Password</label>
+               <input type="password" id="password" name="password">
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="age" id="age" name="age">
+            </div>
+        </fieldset>
+        
+    </form>
+    <div id="message"></div>
+    <script src="script.js1"></script>
+        
+    </body>
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('pass').value;
+    const age = document.getElementById('age').value;
+</html>
