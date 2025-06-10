@@ -3,8 +3,6 @@
     <body>
         <h2>JavaScript Objects data structure and array</h2>
         <script>
-            //Create a JavaScript object:
-            //Key:value pairs
             var person = {
                 firstname: "Priyanshu",
                 age: 13,
@@ -13,6 +11,12 @@
                 hobbies: "playing",
                 fav_Sport: "Badminton"
             };
-            
+            var color = ["white","black","red","green","blue"]
+            document.write("student name is :" + student.name,"<br>","student favourite sport is :"+student.fav_sport);
+            document.write("Before Poping the colors are:"+color.join("^"));
+            document.write("My favorite color is :" +color[3]);
+            color.pop();
+            document.write("After Poping the colors are :" + color.join("*"));
+        </script>
     </body>
 </html>
