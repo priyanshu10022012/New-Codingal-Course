@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="demo">DOM Structure</title>
+    </head>
+    <body>
+        <p>Adding JS as separate file and assinging value form one node to another</p>
+        <button type="button" onclick="myfunction()">Click Me!</button>
+        <p id="result"></p>
+        <p id="result1"></p>
+     <script src="script.js">
+        </script>
+    </body>
+</html>   
