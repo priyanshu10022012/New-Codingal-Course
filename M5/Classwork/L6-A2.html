@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1 style="color:aquamarine;">JavaScript Functions</h1>
+    <p style="color: greenyellow;">Time is a fundamental aspect of existence, constantly moving forward and shaping our experiences</p>
+    <p style="background-image: url('watch_img.jpeg');"></p>
+    <img id="myImg" src="watch_img.jpeg" alt="watch" style="width:100%;max-width:300px">
+
+    <h1 id="demo"></h1>
+
+
+    <script>
+        
+
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+            let d = new Date();
+            document.body.style.backgroundImage = "url('')";
+            document.getElementById("demo").
+            innerHTML =
+                d.getHours() + ":" +
+                d.getMinutes() + ":" +
+                d.getSeconds();
+        }
+    </script>
+
+</body>
+
+</html>

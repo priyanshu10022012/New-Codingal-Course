@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1 style="color:aquamarine;">JavaScript Functions</h1>
+    <p style="color: greenyellow;">Time is a fundamental aspect of existence, constantly moving forward and shaping our experiences</p>
+    <p style="background-image: blue-rasin-clock.webp;">A background image for a p element:</p>
+    <h1 id="demo"></h1>
+    <script>
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+            let d = new Date();
+            document.getElementById("demo").innerHTML =
+                d.getHours() + ":" +
+                d.getMinutes() + ":" +
+                d.getSeconds();
+        }
+    </script>
+
+</body>
+
+</html>
