@@ -2,26 +2,17 @@
 <html>
 
 <body>
-
-    <h1>JavaScript Functions</h1>
-    <h2>Callback Functions</h2>
-
-    <p>The result of the calculation is:</p>
-    <p id="demo"></p>
-
-    <script>
-        function myDisplayer(something) {
-            document.getElementById("demo").innerHTML = something;
-        }
-
-        function myCalculator(num1, num2, myCallback) {
-            let sum = num1 + num2;
-            myCallback(sum);
-        }
-
-        myCalculator(5, 5, myDisplayer);
-    </script>
-
+      <h2>Convert a JavaScript object into a JSON, and sent it to a server</h2>
+      <p id="result1"></p>
+      <p id="result2"></p>
+      <p id="result3"></p>
+      <script>
+        var myObj = {name: "Priyanshu", age: "13", grade: "8",}
+        var myJSON = JSON.stringify(myObj);
+        var newObj = JSON.parse(myJSON);
+        document.getElementById("result1").innerHTML = newObj.name;
+        document.getElementById("result2").innerHTML = newObj.age;
+        document.getElementById("result3").innerHTML = newObj.grade;
+      </script>
 </body>
-
 </html>

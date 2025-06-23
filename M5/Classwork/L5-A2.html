@@ -3,19 +3,19 @@
 
 <body>
 
-    <h1>JavaScript Functions</h1>
-    <h2>setTimeout() with a Callback</h2>
-
-    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
-
-    <h1 id="demo"></h1>
+    
+    <h2>JavaScript async / await</h2>
+    <h1 id="result"></h1>
 
     <script>
-        setTimeout(myFunction, 3000);
-
-        function myFunction() {
-            document.getElementById("demo").innerHTML = "I love You !!";
+        async function add(a,b){
+            let response = await (a+b);
+            display(response);
         }
+        function display(a) {
+            document.getElementById("result").innerHTML = a;
+        }
+        add(5,20);
     </script>
 
 </body>
