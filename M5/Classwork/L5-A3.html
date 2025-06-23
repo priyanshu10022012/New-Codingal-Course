@@ -13,7 +13,7 @@
             }
             let myPromise = new Promise(function (myresolve,myreject) {
             let x = 0;
-            if (x==0) {
+            if (x==7) {
                 myresolve("Ok");
             }
             else {
@@ -21,8 +21,11 @@
             }
         });
         myPromise.then(
-            function (value) {sum(5,5);},
-            function (Error) {sum(Error);}
+            function (value){
+                sum(value);
+            }
+            function (Error){
+            mydisplayer(error);}
     );
         </script>
     </body>

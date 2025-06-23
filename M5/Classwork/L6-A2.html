@@ -5,10 +5,7 @@
 
     <h1 style="color:aquamarine;">JavaScript Functions</h1>
     <p style="color: greenyellow;">Time is a fundamental aspect of existence, constantly moving forward and shaping our experiences</p>
-    <p style="background-image: url('watch_img.jpeg');"></p>
-    <img id="myImg" src="watch_img.jpeg" alt="watch" style="width:100%;max-width:300px">
-
-    <div id="container"></h1>
+     <p id="demo"></p>
     <script>
         function myFunction() {
                 let d = new Date();
@@ -17,30 +14,8 @@
                     innerHTML =
                     d.getHours() + ":" +
                     d.getMinutes() + ":" +
-                    d.getSeconds();
+                    d.getSeconds() + ":"; 
             }
-        const timeElement = document.getElementById('currentTime');
-
-        // Get current time
-       const now = new Date();
-       const hours = now.getHours();
-       const minutes = now.getMinutes().toString().padStart(2, '0');
-       const timeString = `${hours}:${minutes}`;
-
-       // Set the content and attributes of the <time> element
-       timeElement.textContent = timeString;
-       timeElement.dateTime = now.toISOString();
-        setInterval(myFunction, 1000);
-
-        
-        timeElement.style.backgroundColor = '#ffe599'; // light yellow
-        timeElement.style.padding = '6px 10px';
-        timeElement.style.borderRadius = '6px';
-        timeElement.style.fontWeight = 'bold';
-        timeElement.style.color = '#000';
-        const container = document.getElementById('container');
-            container.appendChild(document.createTextNode('The current time is: '));
-            container.appendChild(timeElement);
     </script>
 
 </body>
