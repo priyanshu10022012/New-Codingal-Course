@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Promoise</h2>
+        <p id="demo"></p>
+        <script>
+            function mydisplayer(some) {
+                document.getElementById("demo").innerHTML= some;
+            }
+            function sum(a,b) {
+                var sum = a+b;
+                mydisplayer(sum);
+            }
+            let myPromise = new Promise(function (myresolve,myreject) {
+            let x = 0;
+            if (x==0) {
+                myresolve("Ok");
+            }
+            else {
+                myreject("Error");
+            }
+        });
+        myPromise.then(
+            function (value) {sum(5,5);},
+            function (Error) {sum(Error);}
+    );
+        </script>
+    </body>
+</html>
