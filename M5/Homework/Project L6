@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form - Age Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    .success {
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Login Form</h2>
+  <form id="loginForm">
+    <input type="text" id="name" placeholder="Enter your name" required />
+    <input type="number" id="age" placeholder="Enter your age" required />
+    <button type="submit">Login</button>
+    <div id="message"></div>
+  </form>
+</div>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop form from submitting
+
+    const name = document.getElementById("name").value.trim();
+    const age = parseInt(document.getElementById("age").value);
+    const messageDiv = document.getElementById("message");
+
+    // Clear previous messages
+    messageDiv.textContent = "";
+    messageDiv.className = "";
+
+    // Validation
+    if (name === "" || !/^[a-zA-Z ]+$/.test(name)) {
+      messageDiv.textContent = "Please enter a valid name.";
+      messageDiv.className = "error";
+    } else if (isNaN(age) || age < 18) {
+      messageDiv.textContent = "You must be 18 or older to login.";
+      messageDiv.className = "error";
+    } else {
+      messageDiv.textContent = `Welcome, ${name}! You are eligible to login.`;
+      messageDiv.className = "success";
+    }
+  });
+</script>
+
+</body>
+</html>
