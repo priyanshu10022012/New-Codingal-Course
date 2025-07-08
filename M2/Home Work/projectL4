@@ -1,0 +1,41 @@
+<style>
+body {
+
+}
+.text1{
+    color: aqua;
+    text-decoration: overline;
+}
+.text2{
+    
+    color: 71ffb0;
+    text-decoration:line-through ;
+}
+.text3{
+    
+    color: rgb(70,98,120);
+    text-decoration:underline ;
+}
+.text4{
+    
+    color: rgba(0,0,0,0.4);
+    text-decoration:underline overline ;
+}
+.p1{
+    font-family:"Times new roman"'Times New Roman', Times, serif ;
+}
+.p1{
+    font-family:Arial, Helvetica, sans-serif  ;
+}
+</style>
+<body>
+    <h2>Typography with food</h2>
+    <div class="text1">Food typography explores the use of edible materials to create letters and text, merging the visual language of
+    typography with the sensory experience of food.</div>
+    <div class ="text2">Food typography, also known as "Trofigraphy", takes the principles of typography and applies them to food. This means
+    using ingredients like fruits, vegetables, and baked goods to create letters, words, or even entire messages.</div>
+    <div class ="text3">It combines the visual appeal of typography with the taste and texture of food, offering a more immersive experience for
+    viewers.</div>
+    <p class="p1">Animals that feed on plants often serve as sources of food for other animals.</p>
+    <p class="p2">Plants which converted solar energy to food by photosynthesis,are the primary food source.</p>
+</body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Class</h1>
+    <p>How to use a Class method.</p>
+
+    <p id="Student1"></p>
+    <p id="Student2"></p>
+    <script>
+        class student {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+
+                }
+                age() {
+                            let date = new Date();
+                            return date.getFullYear() - this.year;
+                        }
+                    }
+                    studentObj1 = new student("Riya",2014);
+                    document.getElementById("Student1").innerHTML =
+                    "My name is " + studentObj1.name +". I was born in " + studentObj1.year +".And my age is " +studentObj1.age();
+                    studentObj2 = new student("Tina", 2018);
+                    document.getElementById("Student2").innerHTML =
+                    "My name is " + studentObj2.name + ". I was born in " + studentObj2.year + ".And my age is " + studentObj2.age();
+    </script>
+</body>
+</html>            

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum & Trigonometric Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input,
+        button {
+            margin: 10px 0;
+        }
+
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sum of Arguments</h2>
+    <input type="text" id="numbersInput" placeholder="Enter numbers separated by commas" />
+    <button onclick="calculateSum()">Calculate Sum</button>
+
+    <h2>Trigonometric Values (Degrees)</h2>
+    <input type="number" id="angleInput" placeholder="Enter angle in degrees" />
+    <button onclick="calculateTrig()">Calculate Trig Values</button>
+
+    <div class="output" id="outputArea"></div>
+<script>
+    function sumArguments(...args) {
+            return args.reduce((acc, val) => acc + val, 0);
+        }
+        function degreesToRadians(degrees) {
+                return degrees * (Math.PI / 180);
+            } 
+            function calculateSum() {
+                    const input = document.getElementById("numbersInput").value;
+                    const numbers = input.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
+
+                    if (numbers.length === 0) {
+                        document.getElementById("outputArea").innerHTML = "Please enter valid numbers.";
+                        return;
+                    }
+
+                    const sum = sumArguments(...numbers);
+                    document.getElementById("outputArea").innerHTML = `Sum: ${sum}`;
+                }
+
+                // Function to calculate trig values
+                function calculateTrig() {
+                    const angle = parseFloat(document.getElementById("angleInput").value);
+                    if (isNaN(angle)) {
+                        document.getElementById("outputArea").innerHTML = "Please enter a valid angle.";
+                        return;
+                    }
+
+                    const rad = degreesToRadians(angle);
+                    const sinVal = Math.sin(rad).toFixed(4);
+                    const cosVal = Math.cos(rad).toFixed(4);
+                    const tanVal = Math.tan(rad).toFixed(4);
+
+                    document.getElementById("outputArea").innerHTML = `
+        Trigonometric values for ${angle}°:<br>
+        sin(${angle}°) = ${sinVal}<br>
+        cos(${angle}°) = ${cosVal}<br>
+        tan(${angle}°) = ${tanVal}
+      `;
+                }
+          </script>
+</body>
+</html>

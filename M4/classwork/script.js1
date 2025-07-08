@@ -1,0 +1,22 @@
+function validate(e){
+    e.preventDefault();
+}
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('pass').value;
+    const age = document.getElementById('age').value;
+    const msgbox = document.getElementById('message');
+    let message='';
+    if(email === ''){
+        message = 'Please enter an email.';
+        msgbox.style.color = 'red';
+    } else if(pass === 'pass'){
+        message = 'password must be  at least 8 character';
+        msgbox.style.color ='orange';
+    }else if(age === 'age'){
+        between12 and 50
+    }
+    else{
+        message='Login Successful'
+        msgbox.style.color ='green';
+    }
+
