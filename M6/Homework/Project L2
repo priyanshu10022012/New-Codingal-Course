@@ -1,0 +1,32 @@
+get<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank App - Income & Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Bank App</h1>
+    <div>
+      <input type="number" id="amount" placeholder="Enter amount">
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button onclick="addTransaction()">Add</button>
+    </div>
+
+    <h2>Summary</h2>
+    <p>Income: ₹<span id="income">0</span></p>
+    <p>Expense: ₹<span id="expense">0</span></p>
+    <p>Savings: ₹<span id="savings">0</span></p>
+
+    <h2>Transactions</h2>
+    <ul id="transactions"></ul>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
