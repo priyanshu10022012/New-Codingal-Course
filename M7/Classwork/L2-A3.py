@@ -1,6 +1,6 @@
 first_name = "Codingal"
 last_name ="Education"
-full_name = first_name+""+last_nameexample = "Haa"*5
+full_name = first_name+""+last_name+ example = "Haa"*5
 print("First Name :",first_name)
 print("Last Name :",last_name)
 print("Full Name :",full_name)
