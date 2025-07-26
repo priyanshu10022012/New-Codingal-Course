@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Debit & Credit Tracker</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f6f8;
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  form input, form select, form button {
+    flex: 1 1 100px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  #balance {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007700;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>🏦 Bank Debit & Credit Tracker</h2>
+
+  <p>Current Balance: <span id="balance">0.00</span></p>
+
+  <form id="txnForm">
+    <input type="number" id="amount" placeholder="Amount" required>
+    <select id="type">
+      <option value="credit">Credit</option>
+      <option value="debit">Debit</option>
+    </select>
+    <input type="text" id="desc" placeholder="Description">
+    <button type="submit">Add Transaction</button>
+  </form>
+
+  <h3>📄 Transaction History</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Date & Time</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="txnTable"></tbody>
+  </table>
+</div>
+
+<script>
+let balance = 0;
+const balanceEl = document.getElementById('balance');
+const form = document.getElementById('txnForm');
+const txnTable = document.getElementById('txnTable');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const amountInput = document.getElementById('amount');
+  const typeInput = document.getElementById('type');
+  const descInput = document.getElementById('desc');
+
+  const amount = parseFloat(amountInput.value);
+  const type = typeInput.value;
+  const desc = descInput.value || '-';
+
+  if (isNaN(amount) || amount <= 0) {
+    alert("Please enter a valid positive amount.");
+    return;
+  }
+
+  if (type === 'credit') {
+    balance += amount;
+  } else if (type === 'debit') {
+    balance -= amount;
+  }
+
+  balanceEl.textContent = balance.toFixed(2);
+
+  const row = txnTable.insertRow();
+  row.insertCell(0).textContent = new Date().toLocaleString();
+  row.insertCell(1).textContent = type.charAt(0).toUpperCase() + type.slice(1);
+  row.insertCell(2).textContent = amount.toFixed(2);
+  row.insertCell(3).textContent = desc;
+
+  form.reset();
+});
+</script>
+
+</body>
+</html>
