@@ -1,13 +1,18 @@
 def swap_three_numbers():
-# Read three integers from user input
-a, b, c = map(int, input("Enter three numbers (a b c): ").split())
+    # Prompt user until valid input is given
+    while True:
+        try:
+            a, b, c = map(int, input("Enter three integers separated by spaces: ").split())
+            break
+        except ValueError:
+            print("Invalid input. Please enter exactly three integers, e.g. 10 20 30.")
 
-print(f"Before swapping: a = {a}, b = {b}, c = {c}")
+    print(f"\nBefore swapping:\n  a = {a}\n  b = {b}\n  c = {c}")
 
-# Swap cyclically: a ← c, b ← a, c ← b
-a, b, c = c, a, b
+    # Perform cyclic swap: a ← c, b ← a, c ← b
+    a, b, c = c, a, b
 
-print(f"After swapping: a = {a}, b = {b}, c = {c}")
+    print(f"\nAfter swapping:\n  a = {a}\n  b = {b}\n  c = {c}")
 
 if __name__ == "__main__":
-swap_three_numbers()
+    swap_three_numbers()
