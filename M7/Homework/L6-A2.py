@@ -1,0 +1,21 @@
+import turtle
+turtle.Screen().bgcolor("pink")
+board = turtle.Turtle()
+# first triangle for star
+board.forward(100)
+board.left(120)
+board.forward(100)
+board.left(120)
+board.forward(100)
+board.penup()
+board.right(150)
+board.forward(50)
+board.pendown()
+board.right(90)
+board.forward(100)
+board.right(120)
+board.forward(100)
+board.right(120)
+board.forward(100)
+turtle.done()
+# This code creates a turtle graphics window and draws a star shape using two triangles.
