@@ -1,0 +1,20 @@
+first = ['Apple', 'Banana', 'Cherry','Guava','Kiwi']
+print("Length of list:", len(first))
+print("First:", first[0])
+print("Last:", first[-1])
+first.append('Mango')
+print("Updated List:", first)
+first.remove('Banana')
+print("Updated List:", first)
+first.sort()
+print("sorted List:", first)
+first.pop(1)
+print("Updated List:", first)
+first.reverse()
+print("Reversed List:", first)
+first = first*2
+print("Multiplication on List:", first)
+first = first[2:5]
+print("Sliced List:", first)
+first.clear()
+print("Updated List:", first)
