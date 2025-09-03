@@ -1,0 +1,2 @@
+File in Write mode ....Hello, I am Priyanshu. I am 13 yr. old
+ File in Append mode ....Hello, I am Priyanshu. I am 13 yr. old
